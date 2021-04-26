@@ -24,13 +24,14 @@ function makeBoard() {
 function makeHtmlBoard() {
   // TODO: get "htmlBoard" variable from the item in HTML w/ID of "board"
   let htmlBoard = document.getElementById('board')
-  // TODO: add comment for this code
+  // listen for a click on the top row of the board to denote where the user is
+  // going to 'drop' their connect piece
   let top = document.createElement("tr");
   top.setAttribute("id", "column-top");
   top.addEventListener("click", handleClick);
 
   for (let x = 0; x < WIDTH; x++) {
-    var headCell = document.createElement("td");
+    let headCell = document.createElement("td");
     headCell.setAttribute("id", x);
     top.append(headCell);
   }
