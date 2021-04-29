@@ -22,7 +22,7 @@ function makeBoard() {
       for (let j = 0; j < WIDTH; j++) {
         board[i].push(null);
       }
-  }
+    }
 }
 
 /** makeHtmlBoard: make HTML table and row of column tops. */
