@@ -109,11 +109,18 @@ function handleClick(evt) {
   // check for tie
   // TODO: check if all cells in board are filled; if so call, call endGame
   if (board.every(row => row.every(cell => cell))) {
+    delete top;
     return endGame('Tie Game!');
   }
   // switch players
   // TODO: switch currPlayer 1 <-> 2
   currPlayer = currPlayer === 1 ? 2 : 1;
+
+  // change the player div border to encompass the player who's turn it is
+  let turnWrapR = document.querySelector('#player1');
+  let turnWrapB = document.querySelector('#player2');
+  turnWrapR.classList.toggle('turnOnR');
+  turnWrapB.classList.toggle('turnOnB');
 }
 
 /** checkForWin: check board cell-by-cell for "does a win start here?" */
