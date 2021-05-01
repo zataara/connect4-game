@@ -81,7 +81,7 @@ function placeInTable(y, x) {
 
 function endGame(msg) {
   // TODO: pop up alert message
-  alert('Game Over!')
+  setTimeout(alert(msg), 4000)
 }
 
 /** handleClick: handle click of column top to play piece */
@@ -103,13 +103,13 @@ function handleClick(evt) {
 
   // check for win
   if (checkForWin()) {
-    return endGame(`Player ${currPlayer} won!`);
+    return endGame(`Player ${currPlayer} wins!`);
   }
 
   // check for tie
   // TODO: check if all cells in board are filled; if so call, call endGame
   if (board.every(row => row.every(cell => cell))) {
-    return endGame('Tie!');
+    return endGame('Tie Game!');
   }
   // switch players
   // TODO: switch currPlayer 1 <-> 2

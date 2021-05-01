@@ -1,12 +1,34 @@
-/* game board table */
+
+
+
+body {
+  background-color: black;
+  height: 100%;
+  color: white;
+
+  
+}
+
+#gameboard {
+  background-image: linear-gradient(to right, red , blue);;
+  margin: 1rem 2rem;
+  padding: .3rem;
+  
+
+}
+
+#gameb {
+  background-color: black;
+  padding: 1rem;
+  
+
+}
 
 #board td {
   width: 50px;
   height: 50px;
   border: solid 1px #666;
 }
-
-/* pieces are div within game table cells: draw as colored circles */
 
 .piece {
   /* TODO: make into circles */
@@ -16,11 +38,11 @@
   border-radius: 50%;
 }
 
-.piece1 {
+.piece.p1 {
   background-color: red;
 }
 
-.piece2 {
+.piece.p2 {
   background-color: blue
 }
 
@@ -33,5 +55,7 @@
 }
 
 #column-top td:hover {
-  background-color: gold;
+  background-color: rgb(184, 0, 184);
+  border-radius: 50%;
+  
 }
