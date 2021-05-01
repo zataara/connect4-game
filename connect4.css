@@ -9,19 +9,19 @@ body {
   
 }
 
-#gameboard {
+#gameBoarder {
   background-image: linear-gradient(to right, red , blue);;
   margin: 1rem 2rem;
   padding: .3rem;
-  
-
 }
 
-#gameb {
+#gamecarpet {
   background-color: black;
   padding: 1rem;
-  
+}
 
+#gameboard {
+  display: inline-block;
 }
 
 #board td {
