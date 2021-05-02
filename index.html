@@ -8,14 +8,16 @@
     <div id='gamecarpet'>
       <div id='gameboard'>
   <h1>Connect Four Game</h1>
-  <div>
-    <h3 id='highscore'>High Scores</h3>
-  </div>
   <div id='explanation'>
     <h3>How to Play:</h3>
       <p>Be the first player to connect four slots either horizontally, vertically or diagonally.</p>
   </div>
   <div>
+    <input type='color' id="p1-color" name='p1c' value='#FF0000'>
+      <label for='p1c'>Player 1</label>
+    <input type='color' id="p2-color" name='p2c' value='#0000FF'>
+    <label for='p2c'>Player 2</label>
+    <button id="start-game">Start Game!</button>
     <h3 class='turnOnR' id='player1'>Player 1</h3>
     
     <h3  id='player2'>Player 2</h3>
@@ -31,7 +33,7 @@
 </div>
 </div>
 
-<script src="connect4.js"></script>
+<script src="connect4-oop.js"></script>
 
 </body>
 </html>
