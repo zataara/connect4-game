@@ -9,6 +9,8 @@ class Game {
       this.makeBoard();
       this.makeHtmlBoard();
       this.gameOver = false;
+      this.updateColors();
+      this.updateButton();
     }
   
     /** makeBoard: create in-JS board structure:
@@ -87,12 +89,22 @@ class Game {
     updateColors() {
         let turnColor1 = document.getElementById('p1-color').value
         let turnColor2 = document.getElementById('p2-color').value
+        let borderColor = document.getElementById('gameBoarder');
+        let titleColor = document.getElementById('game-title')
+
+        titleColor.style.backgroundImage = `linear-gradient(to right, ${turnColor2} , ${turnColor1})`;
+        borderColor.style.backgroundImage = `linear-gradient(to right, ${turnColor1} , ${turnColor2})`;
         document.getElementById('player1').style.borderColor = turnColor1;
         document.getElementById('player2').style.borderColor = turnColor2;
-        console.log('hello')
+    
+    }
+    
+    updateButton(){
+        let but = document.getElementById('start-game');
+        but.innerHTML = 'New Game!';
+
     }
     /** endGame: announce game end */
-  
     endGame(msg) {
        setTimeout(function() {
             alert(msg);
