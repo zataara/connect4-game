@@ -137,7 +137,7 @@ class Game {
       // check for win
       if (this.checkForWin()) {
         this.gameOver = true;
-        return this.endGame(`The ${this.currPlayer.color} player won!`);
+        return this.endGame(`Game Over!`);
       }
   
       // switch players
